@@ -81,7 +81,7 @@
             <span class="badge android-badge">Android 7.0+</span>
           </div>
 
-          <a href="https://github.com/kys0ff/Kura/releases/download/v1.0.2/app-release.apk" class="download-button">
+          <a href="#" class="download-button">
             Download Now
           </a>
         </div>
@@ -202,58 +202,10 @@
 
 </div>
 
-<script>
-  function showView(viewId, pushHistory = true) {
-    const views = document.querySelectorAll('.page-view');
-    views.forEach(view => view.style.display = 'none');
-
-    const targetView = document.getElementById(viewId);
-    if (targetView) {
-      targetView.style.display = 'block';
-    }
-
-    // Handle the Download Button with Animation
-    const downloadBtn = document.querySelector(".top-nav-download-kura");
-    if (viewId === 'privacy-view') {
-      downloadBtn.style.display = "block";
-      setTimeout(() => downloadBtn.classList.add("button-visible"), 10);
-    } else {
-      downloadBtn.classList.remove("button-visible");
-      setTimeout(() => {
-        if (!downloadBtn.classList.contains("button-visible")) downloadBtn.style.display = "none";
-      }, 400);
-    }
-
-    // Update Browser History
-    if (pushHistory) {
-      const url = viewId === 'home-view' ? window.location.pathname : `?view=${viewId}`;
-      history.pushState({viewId}, "", url);
-    }
-
-    window.scrollTo(0, 0);
-  }
-
-  // Handle Browser Back/Forward buttons
-  window.addEventListener("popstate", (event) => {
-    if (event.state && event.state.viewId) {
-      showView(event.state.viewId, false);
-    } else {
-      showView('home-view', false);
-    }
-  });
-
-  // Initialize on page load
-  window.addEventListener("DOMContentLoaded", () => {
-    const params = new URLSearchParams(window.location.search);
-    const view = params.get('view');
-    if (view && document.getElementById(view)) {
-      showView(view, false);
-    } else {
-      // Set initial state for home
-      history.replaceState({viewId: 'home-view'}, "", window.location.pathname);
-    }
-  });
-</script>
+<!--suppress HtmlUnknownTarget -->
+<script src="js/app.js"></script>
+<!--suppress HtmlUnknownTarget -->
+<script src="js/latest.js"></script>
 
 </body>
 

@@ -70,3 +70,5 @@ window.addEventListener("DOMContentLoaded", () => {
     history.replaceState(initialState, "", window.location.pathname);
   }
 });
+
+(window as any).showView = showView;

@@ -1,10 +1,27 @@
-import { resolve } from 'path';
+const path = require('path');
 
-export const entry = {
+module.exports = {
+  // Add both files here
+  entry: {
     app: './ts/app.ts',
-};
-export const output = {
-    path: resolve(__dirname, 'dist'),
+    latest: './ts/latest.ts',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,        // Find all .ts files
+        use: 'ts-loader',     // Use ts-loader to transpile them
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'], // This allows you to import without extensions
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
-    filename: './ts/app.ts',
+    // [name] will automatically create 'app.js' and 'latest.js'
+    filename: 'js/[name].js',
+  },
 };
