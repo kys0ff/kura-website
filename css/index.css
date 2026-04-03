@@ -18,8 +18,8 @@ header {
 
   /* 2. The Glass Effect */
   background: rgba(27, 27, 31, 0.75); /* Match your #1b1b1f with 75% alpha */
-  -webkit-backdrop-filter: blur(12px);  /* Support for Safari */
-  backdrop-filter: blur(12px);          /* The blur effect */
+  -webkit-backdrop-filter: blur(12px); /* Support for Safari */
+  backdrop-filter: blur(12px); /* The blur effect */
 
   /* 3. The "Edge" (Visual separation) */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -69,9 +69,9 @@ header {
 }
 
 .kura-icon {
-  width: 48px;
-  height: 48px;
-  filter: invert(49%) sepia(98%) saturate(1965%) hue-rotate(166deg) brightness(98%) contrast(98%);
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
 }
 
 .top-nav-spacer {
@@ -103,11 +103,9 @@ header {
 
   /* The "Magic" Transition */
   /* We transition transform, opacity, and background separately for smoothness */
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), /* "Bouncy" elastic effect */
-    opacity 0.4s ease,
-    box-shadow 0.3s ease;
+  transition: background-color 0.3s ease,
+  transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), /* "Bouncy" elastic effect */ opacity 0.4s ease,
+  box-shadow 0.3s ease;
 }
 
 /* Hover Effect: Brighten and Lift */
@@ -374,9 +372,17 @@ main {
 }
 
 /* Stagger the animation so they appear one by one */
-.feature-card:nth-child(1) { animation-delay: 0.1s; }
-.feature-card:nth-child(2) { animation-delay: 0.2s; }
-.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.feature-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.feature-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
 
 .kura-badge-preview {
   display: flex;
@@ -636,26 +642,26 @@ footer p {
   /* 2. Kura Overview (Hero Section) */
   .kura-overview {
     flex-direction: column; /* Stack the phone and the text vertically */
-    padding-left: 0;        /* Remove the 20% desktop offset */
-    padding-top: 100px;     /* Space for the sticky header */
+    padding-left: 0; /* Remove the 20% desktop offset */
+    padding-top: 100px; /* Space for the sticky header */
     align-items: center;
     text-align: center;
   }
 
   .kura-summary {
-    margin-left: 0;         /* Remove the 10% desktop offset */
-    margin-top: 40px;       /* Add space between the phone and the card */
-    width: 90%;             /* Ensure the card doesn't hit screen edges */
+    margin-left: 0; /* Remove the 10% desktop offset */
+    margin-top: 40px; /* Add space between the phone and the card */
+    width: 90%; /* Ensure the card doesn't hit screen edges */
     padding: 30px 20px;
   }
 
   .phone-wrapper {
-    width: 240px;           /* Slightly smaller phone for mobile views */
+    width: 240px; /* Slightly smaller phone for mobile views */
     height: 520px;
   }
 
   .hero-title {
-    font-size: 2.2rem;      /* Scale down the title size */
+    font-size: 2.2rem; /* Scale down the title size */
   }
 
   /* 3. General Cleanup */
@@ -664,7 +670,7 @@ footer p {
   }
 
   .kura-app {
-    display: none;          /* Optional: Hide "Kura" text next to logo to save space */
+    display: none; /* Optional: Hide "Kura" text next to logo to save space */
   }
 
   .features {

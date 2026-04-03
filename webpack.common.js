@@ -1,12 +1,10 @@
-const path = require('path');
+import { resolve } from 'path';
 
-module.exports = {
-  entry: {
-    app: './js/app.js',
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
+export const entry = {
+    app: './ts/app.ts',
+};
+export const output = {
+    path: resolve(__dirname, 'dist'),
     clean: true,
-    filename: './js/app.js',
-  },
+    filename: './ts/app.ts',
 };

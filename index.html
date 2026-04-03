@@ -4,20 +4,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Download Kura</title>
+  <title>Download Kura | Secure Android App Locker</title>
   <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
-  <meta name="description" content="Kura is a minimalist, secure app-locking utility for Android.">
+
+  <meta name="description"
+        content="Kura is a minimalist, secure app-locking utility for Android. Protect your privacy with native biometric authentication and an open-source, lightweight design.">
+  <meta name="keywords" content="Kura, Android, App Locker, Privacy, Open Source, FOSS, Biometric Lock, Security">
+  <meta name="author" content="kys0ff">
 
   <meta property="og:title" content="Download Kura">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <meta property="og:description"
+        content="A minimalist, secure app-locking utility for Android using native biometrics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kys0ff.github.io/kura-website/">
+  <meta property="og:image:alt" content="Kura App interface showing a clean biometric lock screen">
 
-  <link rel="icon" href="/favicon.png" sizes="any">
-  <link rel="apple-touch-icon" href="favicon.png">
+  <meta name="twitter:title" content="Download Kura">
+  <meta name="twitter:description" content="Secure your Android apps with Kura's minimalist, native biometric locking.">
+
+  <link rel="icon" href="/favicon.svg" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#1b1b1f">
@@ -30,7 +39,7 @@
   <header>
     <div class="top-nav-bar">
       <a class="title-link-container" href="/">
-        <img class="kura-icon" src="img/kura-icon.png" alt="Kura">
+        <img class="kura-icon" src="img/kura-icon.svg" alt="Kura">
         <p class="kura-app">Kura</p>
       </a>
 
@@ -140,32 +149,37 @@
     <section class="privacy-policy">
       <div class="privacy-header">
         <h2>Privacy & Transparency</h2>
-        <p>Kura is built on the principle of <strong>Zero-Knowledge</strong>. We believe your security shouldn't come at the cost of your privacy.</p>
+        <p>Kura is built on the principle of <strong>Zero-Knowledge</strong>. We believe your security shouldn't come at
+          the cost of your privacy.</p>
       </div>
 
       <div class="privacy-grid">
         <div class="policy-card">
           <div class="policy-icon">🌐</div>
           <h3>Internet Usage</h3>
-          <p>Kura only accesses the internet to fetch app icons/badges from official repositories and to check for GitHub releases. This ensures your app-locker looks native and stays updated.</p>
+          <p>Kura only accesses the internet to fetch app icons/badges from official repositories and to check for
+            GitHub releases. This ensures your app-locker looks native and stays updated.</p>
         </div>
 
         <div class="policy-card">
           <div class="policy-icon">⚙️</div>
           <h3>User Control</h3>
-          <p>Automated update checks and metadata fetching can be toggled off at any time in the <strong>App Settings</strong>. You are in full control of when Kura connects to the web.</p>
+          <p>Automated update checks and metadata fetching can be toggled off at any time in the <strong>App
+            Settings</strong>. You are in full control of when Kura connects to the web.</p>
         </div>
 
         <div class="policy-card">
           <div class="policy-icon">🔑</div>
           <h3>Permissions</h3>
-          <p>We request "Usage Access" and "Overlay" permissions solely to detect which app is opening and to show the lock screen. No biometric data ever leaves your device's secure enclave.</p>
+          <p>We request "Usage Access" and "Overlay" permissions solely to detect which app is opening and to show the
+            lock screen. No biometric data ever leaves your device's secure enclave.</p>
         </div>
 
         <div class="policy-card">
           <div class="policy-icon">🛡️</div>
           <h3>No Tracking</h3>
-          <p>Zero analytics. Zero crash reports sent to third parties. Zero advertisements. The code is 100% open-source for public audit.</p>
+          <p>Zero analytics. Zero crash reports sent to third parties. Zero advertisements. The code is 100% open-source
+            for public audit.</p>
         </div>
       </div>
 
@@ -213,7 +227,7 @@
     // Update Browser History
     if (pushHistory) {
       const url = viewId === 'home-view' ? window.location.pathname : `?view=${viewId}`;
-      history.pushState({ viewId }, "", url);
+      history.pushState({viewId}, "", url);
     }
 
     window.scrollTo(0, 0);
@@ -236,7 +250,7 @@
       showView(view, false);
     } else {
       // Set initial state for home
-      history.replaceState({ viewId: 'home-view' }, "", window.location.pathname);
+      history.replaceState({viewId: 'home-view'}, "", window.location.pathname);
     }
   });
 </script>
