@@ -1,13 +1,18 @@
 {
-  "name": " ",
-  "version": "0.0.1",
-  "description": "",
+  "name": "kura-website",
+  "version": "1.0.0",
+  "description": "Minimalist landing page for Kura, a secure Android app locker.",
   "private": true,
   "keywords": [
-    ""
+    "kura",
+    "android",
+    "privacy",
+    "security",
+    "app-locker",
+    "open-source"
   ],
-  "license": "",
-  "author": "",
+  "license": "MIT",
+  "author": "kys0ff",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.config.dev.js",
@@ -20,8 +25,5 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4",
     "webpack-merge": "^5.10.0"
-  },
-  "dependencies": {
-    "modern-normalize": "^3.0.1"
   }
 }
