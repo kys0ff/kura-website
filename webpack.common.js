@@ -20,8 +20,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
+    filename: 'js/[name].js', // This creates dist/js/app.js
+    publicPath: './',         // Added the dot to make it relative
     clean: true,
-    // [name] will automatically create 'app.js' and 'latest.js'
-    filename: 'js/[name].js',
   },
 };
